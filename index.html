@@ -1,17 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>GIT Tutarial</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very Serious Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffcc70, #ff8c94);
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: #444;
+        }
+
+        .joke {
+            margin-top: 30px;
+            font-size: 24px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my first GitHub Pages website using Git!</p>
-    <p>This is a basic paragraph element.</p>
+
+    <h1>Welcome to My Website</h1>
+    <p>This site is extremely professional.</p>
+
+    <button onclick="showJoke()">Click for seriousness</button>
+
+    <div class="joke" id="joke">
+        😎 Just kidding. Go drink some water.
+    </div>
+
+    <script>
+        function showJoke() {
+            document.getElementById("joke").style.display = "block";
+        }
+    </script>
+
 </body>
-  <title>GIT Tutarial! Welcome to github</title>
-  <title>Welcome to the 2nd commit</title>
-  <h1>Hello World!</h1>
-  <h1>Hello World! 2nd</h1>
 </html>
