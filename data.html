@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Git Project Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Funny Page 😜</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, pink, lightblue);
+      font-family: Comic Sans MS, cursive;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 50px;
+      animation: wiggle 0.5s infinite;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background: yellow;
+      margin: 40px auto;
+      border-radius: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      background: lime;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: orange;
+      transform: rotate(5deg);
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+      100% { transform: rotate(-3deg); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <h1>Some Other File</h1>
-    <p>Welcome to my first GitHub Pages website using Git!</p>
-    <p>This is a basic paragraph element.</p>
-    <p>This is a basic paragraph element</p>
-    <p>This is a basic paragraph element</p>
+
+  <h1>HELLO BAB 😂</h1>
+
+  <div class="box">BOING!</div>
+
+  <button onclick="alert('HAHA GOT YOU 🤣')">
+    Click me
+  </button>
+
 </body>
 </html>
