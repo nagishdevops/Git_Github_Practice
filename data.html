@@ -1,66 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Funny Page 😜</title>
-  <style>
+<meta charset="UTF-8">
+<title>Crazy Loader</title>
+<style>
     body {
-      background: linear-gradient(45deg, pink, lightblue);
-      font-family: Comic Sans MS, cursive;
-      text-align: center;
-      padding-top: 50px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
     }
 
-    h1 {
-      font-size: 50px;
-      animation: wiggle 0.5s infinite;
+    .loader {
+        position: relative;
+        width: 150px;
+        height: 150px;
     }
 
-    .box {
-      width: 150px;
-      height: 150px;
-      background: yellow;
-      margin: 40px auto;
-      border-radius: 20px;
-      animation: bounce 1s infinite;
+    .loader span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 6px solid transparent;
+        animation: spin 1.2s linear infinite;
     }
 
-    button {
-      font-size: 20px;
-      padding: 10px 20px;
-      background: lime;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
+    .loader span:nth-child(1) {
+        border-top: 6px solid red;
+        animation-delay: 0s;
     }
 
-    button:hover {
-      background: orange;
-      transform: rotate(5deg);
+    .loader span:nth-child(2) {
+        border-right: 6px solid yellow;
+        animation-delay: 0.2s;
     }
 
-    @keyframes wiggle {
-      0% { transform: rotate(-3deg); }
-      50% { transform: rotate(3deg); }
-      100% { transform: rotate(-3deg); }
+    .loader span:nth-child(3) {
+        border-bottom: 6px solid lime;
+        animation-delay: 0.4s;
     }
 
-    @keyframes bounce {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-40px); }
-      100% { transform: translateY(0); }
+    .loader span:nth-child(4) {
+        border-left: 6px solid cyan;
+        animation-delay: 0.6s;
     }
-  </style>
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg) scale(1);
+            filter: hue-rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg) scale(1.3);
+        }
+        100% {
+            transform: rotate(360deg) scale(1);
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    .text {
+        position: absolute;
+        color: white;
+        font-size: 18px;
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+</style>
 </head>
 <body>
 
-  <h1>HELLO BAB 😂</h1>
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-  <div class="box">BOING!</div>
-
-  <button onclick="alert('HAHA GOT YOU 🤣')">
-    Click me
-  </button>
+<div class="text">Loading Brain Cells...</div>
 
 </body>
 </html>
